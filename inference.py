@@ -58,7 +58,7 @@ def main(args):
         is_test=True,
         is_sorted=True
     )
-    dataloader = DataLoader(dataset, num_workers=4, shuffle=False, batch_size=batch_size, pin_memory=True)
+    dataloader = DataLoader(dataset, num_workers=4, shuffle=False, batch_size=batch_size, pin_memory=False)
 
     shape = (4, img_H//8, img_W//8) 
     save_dir = opj(args.save_dir, "unpair" if args.unpair else "pair")
